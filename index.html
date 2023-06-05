@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB-Handson-1</title>
+</head>
+<style>
+
+</style>
+<body>
+    <h1 style="text-align: center; color: aqua;font-style: cursive";>MongoDB-Handson-1</h1>
+    
+
+
+ <p style="color:black;font-size:x-large"> Q.1=>Create a database , give it name like ""Human_Resource"". Create a collection inside this named ""employee""?</p>
+  <P style="color:blue; font-size: x-large;">
+    Ans.  
+     Step 1: use Human_Resource <br>
+     Step 2: db.employee.insertMany([data])
+    </P>
+
+<P style="color:black;font-size:x-large">Q.2=>Query the collection ""employee"" and list all the documents</P>
+<p style="color:blue; font-size: x-large;">Ans. db.employee.find()</p>
+<P style="color:black;font-size:x-large">Q.3=>Query the collection ""employee"" and list the employees who are having salary more than 30000</P>
+<P style="color:blue; font-size: x-large;">Ans. db.employee.find({"salary":{$gt:"30000"}})</P>
+<p style="color:black;font-size:x-large">Q.4=>Query the collection ""employee"" and list the employees who are having experience more than 2 years.</P>
+<P style="color:blue; font-size: x-large;">Ans. db.employee.find({"overallExp":{$gt:"2"}})</P>
+<P style="color:black;font-size:x-large">Q.5=>Query the collection ""employee"" and list the employees who are graduated after 2015 and having experience more than 1 year </P>
+<P style="color:blue; font-size: x-large;">Ans. db.employee.find({$and:[{"yearGrad":{$gt:"2015"}},{"overallExp":{$gt:"1"}}]})</P>
+<p style="color:black;font-size:x-large">Q.6=>Query the collection ""employee"" and update the salary of the employee whose salary is greater than 70000 to 65000.</p>
+<P style="color:blue; font-size: x-large;">Ans. db.employee.updateMany({"salary":{$gt:"30000"}},{$set:{"salary":25000}})</P>
+<P style="color:black;font-size:x-large">Q.7>Delete all the documents from ""employee"" where last company is Y"</P>
+ <P style="color:blue; font-size: x-large;">Ans. db.employee.drop({"lastCompony":{$eq:"Y"}})</P>
+</body>
+</html>
